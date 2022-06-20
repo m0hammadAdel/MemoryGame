@@ -82,16 +82,16 @@ h1 {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     backface-visibility: hidden;
     background-image: linear-gradient(var(--gradient1), var(--gradient2));
 }
 
 .front {
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
     color: #fff;
 }
 
