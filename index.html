@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="game-over">
+        <div class="board">
+            <p class="message">
+                congratualtion you solved this game in <span class="final-score">0</span> moves
+            </p>
+            <div>
+                <p>Would you like to play again</p>
+                <div class="btns">
+                    <button class="yes-btn" onClick="document.location.reload(true)">yes</button>
+                    <button class="no-btn">no</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <h1>Remember Remember</h1>
         <div class="score">
-            <h3>Number of tries</h3>
+            <h3>Number of moves</h3>
             <p data-id="score">0</p>
         </div>
     </header>
@@ -22,6 +36,10 @@
             <div class="back">back</div>
         </div> -->
     </main>
+    <footer>
+        <p>made by <a href="https://www.linkedin.com/in/mohammad-adel-46548a168/" target="_blanck">Mohammad Adel</a> &#169; 2022</p>
+        
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>

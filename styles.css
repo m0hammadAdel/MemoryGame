@@ -18,18 +18,81 @@
 body {
     font-family: sans-serif;
     text-align: center;
+    min-height: 100vh;
+    padding-bottom: 4em;
     background-color: var(--bg-color);
     color: var(--dark-color);
-    min-height: 100vh;
     perspective: 1000px;
+}
+
+button {
+    border: .5px solid grey;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: .3em .8em;
+    margin-left: .5em;
+    cursor: pointer;
+    transition: .3s;
 }
 
 /* ----------------- global roles ----------------- */
 
+.game-over {
+    margin-top: -150vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 3;
+    transition: .8s;
+}
+
+.show-game-over {
+    margin-top: 0;
+}
+
+.board {
+    width: 400px;
+    height: 200px;
+    margin-top: 20vh;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.btns {
+    margin-top: 1em;
+}
+
+.yes-btn {
+    border-color: rgb(64, 167, 64);
+    color:rgb(64, 167, 64);
+}
+
+.yes-btn:hover {
+    background-color:rgb(64, 167, 64);
+    color: white;
+}
+
+.no-btn {
+    border-color: rgb(232, 52, 52);
+    color:rgb(232, 52, 52);
+}
+
+.no-btn:hover {
+    background-color:rgb(232, 52, 52);
+    color: white;
+}
+
+
 header {
-    margin-top: 6em;
-    margin-bottom: 3em;
-    flex-basis: 50%;
+    padding-top: 6em;
+    padding-bottom: 3em;
 }
 
 h1 {
@@ -53,9 +116,9 @@ h1 {
 /* main content */
 
 .cards {
-    flex-basis: 50%;
     width: fit-content;
     margin: 2em auto;
+    margin-bottom: 0;
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -104,6 +167,29 @@ h1 {
     transform: rotateY(180deg);
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: .5em;
+    font-size: .8em;
+    background-color: var(--dark-color);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: .3s;
+}
+
+footer a:hover {
+    color: var(--gradient1);
+}
+
 /* ----------------- responsive design ----------------- */
 
 @media (max-width: 500px) {
@@ -111,5 +197,13 @@ h1 {
         grid-template-columns: repeat(3, 70px);
         grid-template-rows: repeat(4, 70px);
         gap: 5px;
+    }
+
+    header {
+        padding: 2em 0;
+    }
+
+    .board {
+        width: 300px;
     }
 }
